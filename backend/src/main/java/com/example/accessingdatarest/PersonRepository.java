@@ -6,10 +6,10 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-// @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RepositoryRestResource(collectionResourceRel = "people", path = "people")
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE, RequestMethod.PUT})
 public interface PersonRepository extends PagingAndSortingRepository<Person, Long> {
 
 	// List<Person> findByLastName(@Param("name") String name);
