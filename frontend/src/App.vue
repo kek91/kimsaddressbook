@@ -3,22 +3,27 @@
 
         <NavBar/>
 
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
+        <AddressBook/>
 
-        <div class="alert alert-danger">Test</div>
+        <div class="my-5"></div>
+
 
     </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import NavBar from './components/NavBar.vue'
+import AddressBook from './components/AddressBook.vue'
 
 export default {
     name: 'App',
     components: {
-        HelloWorld,
         NavBar,
+        AddressBook,
+    },
+
+    mounted() {
+        document.title = "KimsAddressbook";
     }
 }
 </script>
@@ -30,6 +35,6 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    margin-top: 80px;
 }
 </style>
